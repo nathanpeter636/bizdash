@@ -3,7 +3,7 @@ import React from 'react'
 export function Brand() {
     return (
         <h1>
-            Business Name x
+            STONKS x
         </h1>
     )
 }
