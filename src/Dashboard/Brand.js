@@ -3,7 +3,7 @@ import React from 'react'
 export function Brand() {
     return (
         <h1>
-            STONKS x
+            COOKED Pharmaceuticals
         </h1>
     )
 }

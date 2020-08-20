@@ -7,18 +7,22 @@ import HighchartsReact from 'highcharts-react-official'
 const options = {
   chart: {
         height: '360px',
-      type: 'column'
+      type: 'column',
+      style: {
+        fontFamily: 'Blinker, sans-serif',
+      }
   },
   title: {
-      text: 'Stacked column chart'
+      text: 'Revenue by Product'
   },
   xAxis: {
-      categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas']
+      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
   },
   yAxis: {
       min: 0,
+      reversedStacks: false,
       title: {
-          text: 'Total fruit consumption'
+          text: 'Millions of Dollars'
       },
       stackLabels: {
           enabled: true,
@@ -48,23 +52,39 @@ const options = {
       pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
   },
   plotOptions: {
+      series: {
+        borderWidth: '0',
+      },
       column: {
           stacking: 'normal',
           dataLabels: {
-              enabled: true
+              enabled: false
           }
       }
   },
   series: [{
-      name: 'John',
-      data: [5, 3, 4, 7, 2]
+      name: 'Xanax',
+      data: [5, 3, 4, 7, 2],
+      color: '#008f70'
   }, {
-      name: 'Jane',
-      data: [2, 2, 3, 2, 1]
-  }, {
-      name: 'Joe',
-      data: [3, 4, 4, 2, 5]
-  }]
+      name: 'Oxycontin',
+      data: [2, 2, 3, 2, 1],
+
+      color: '#00CCA0'
+  }, 
+  {
+    name: 'Valium',
+    data: [3, 4, 4, 2, 5],
+    color: '#0AFFCA'
+},
+
+{
+    name: 'Zopoclone',
+    data: [3, 4, 4, 2, 5],
+    color: '#47FFD7'
+},
+
+]
 };
 
 
