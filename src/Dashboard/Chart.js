@@ -3,6 +3,8 @@ import {Card} from "./Card";
 
 import Highcharts from 'highcharts'
 import HighchartsReact from 'highcharts-react-official'
+import { ChartData } from './Data';
+
 
 const options = {
   chart: {
@@ -25,7 +27,7 @@ const options = {
           text: 'Millions of Dollars'
       },
       stackLabels: {
-          enabled: true,
+          enabled: false,
           style: {
               fontWeight: 'bold',
               color: ( // theme
@@ -62,29 +64,7 @@ const options = {
           }
       }
   },
-  series: [{
-      name: 'Xanax',
-      data: [5, 3, 4, 7, 2],
-      color: '#008f70'
-  }, {
-      name: 'Oxycontin',
-      data: [2, 2, 3, 2, 1],
-
-      color: '#00CCA0'
-  }, 
-  {
-    name: 'Valium',
-    data: [3, 4, 4, 2, 5],
-    color: '#0AFFCA'
-},
-
-{
-    name: 'Zopoclone',
-    data: [3, 4, 4, 2, 5],
-    color: '#47FFD7'
-},
-
-]
+  series: ChartData,
 };
 
 
