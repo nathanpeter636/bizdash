@@ -31,7 +31,7 @@ export const ChartData = [
 {
   name: 'Valium',
   data: generateData(12, 6, 0.3),
-  color: '#0AFFCA'
+  color: '#02DED3'
 },
 
 {
@@ -61,3 +61,36 @@ export const tableRows = months.map((month, i) => ({
 }));
 
 console.log(tableRows)
+
+export const tableColumns = [
+
+
+  {
+    width: 240,
+    label: 'Month',
+    dataKey: 'month',
+  },
+
+{
+  width: 240,
+  label: 'Xanax',
+  dataKey: 'Xanax',
+},
+{
+  width: 240,
+  label: 'Oxycontin',
+  dataKey: 'Oxycontin',
+},
+{
+  width: 240,
+  label: 'Valium',
+  dataKey: 'Valium',
+},
+{
+  width: 240,
+  label: 'Zopoclone',
+  dataKey: 'Zopoclone',
+},
+
+
+]

@@ -1,25 +1,34 @@
-import React from 'react'
+import React, {useState, createContext } from "react";
 
-import {Brand} from "./Brand";
-import {Container} from "./Container";
-import {GlobalStyle} from "./GlobalStyle";
-import {Card} from "./Card";
-import {Chart} from "./Chart";
+import { Brand } from "./Brand";
+import { Container } from "./Container";
+import { GlobalStyle } from "./GlobalStyle";
+// import { Card } from "./Card";
+import { Chart } from "./Chart";
+import { VirtualizedTable } from "./Table";
 
-export function Dashboard () {
+import {Darkswitch} from "./Darkswitch"
 
-return (
-    <>
-    <GlobalStyle/>
-    <Container>
-        <Brand/>
-   
-   <Chart/>
-   <Card height={400}> Chart here  </Card>
+export const ThemeContext = createContext();
+
+export function Dashboard() {
+  const themeState = useState('light');
+  const [theme, setTheme] = themeState;
+
+  const dark = theme === 'dark';
+
+  return (
     
-    </Container>
-    </>
-)
+    <ThemeContext.Provider value={themeState}>
+      <GlobalStyle dark={dark} />
+      <Container>
+        <Brand />
 
+        <Darkswitch/>
 
+        <Chart />
+        <VirtualizedTable />
+      </Container>
+    </ThemeContext.Provider>
+  );
 }
