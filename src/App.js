@@ -10,5 +10,6 @@ function App() {
 }
 
 //demo comment
+// demo comment removed
 
 export default App;
